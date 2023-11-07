@@ -1,0 +1,20 @@
+﻿using Blog.Entities.Concrete;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Infrastructure.Persistence.Configuration;
+
+public class AboutConfiguration : IEntityTypeConfiguration<About>
+{
+	public void Configure(EntityTypeBuilder<About> builder)
+	{
+		builder.HasData(
+			new About() { Id = 1, Details = "Blog (Türkçe: ağ günlüğü, günce) veya Weblog (Türkçe: Ağ kütüğü) teknik bilgi gerektirmeden, kendi istedikleri şeyleri, kendi istedikleri şekilde yazan insanların oluşturabildikleri, günlüğe benzeyen web siteleridir. Genellikle güncelden eskiye doğru sıralanmış yazı ve yorumların yayınlandığı, web tabanlı bir yayını belirtir. Çoğunlukla her gönderinin sonunda yazarın adı ve gönderi zamanı belirtilir. Yayıncının seçimine göre okuyucular yazılara yorum yapılabilir. Yorumlar, blog kültürünün çok önemli bir dinamiğidir; bu sayede yazar ve okuyucular arasında iletişim sağlanır. Bunun dışında, geri izleme (trackback) mekanizmasıyla, belirli bir yazı hakkında yazılan diğer yazıların belirlenebilmesi de mümkündür.[1]\r\n\r\nGönderiler genellikle ters kronolojik sırada görüntülenir, böylece en son gönderi web sayfasının en üstünde ilk olarak görünür. 2009 yılına kadar, bloglar genellikle tek bir kişinin, ara sıra küçük bir grubun çalışmasıydı ve genellikle tek bir konuyu kapsıyordu. 2010'larda, birden çok yazarın yazılarını içeren ve bazen profesyonelce düzenlenen \"çok yazarlı bloglar\" (MAB'ler) ortaya çıktı. Gazetelerden, diğer medya kuruluşlarından, üniversitelerden, düşünce kuruluşlarından, savunuculuk gruplarından ve benzer kurumlardan gelen MAB'ler, artan miktarda blog trafiğinden sorumludur. Twitter ve diğer \"mikroblog\" sistemlerinin yükselişi, MAB'lerin ve tek yazarlı blogların haber medyasına entegre edilmesine yardımcı olur. 2010 yıllarından sonra özellikle mobil blog'lar popüler oldu.[2] Sosyal medya ve sosyal ağ'ların yaygınlaşması ile bloglar bunlarla artık gevşek bir şekilde kullanılmaktadır.\r\n\r\nİlk bloglar elle yazılıp güncellenirken, bugün bu iş için özel yazılmış yazılımlar kullanılmaktadır. Bu yazılımlardan bazıları bir blog servisi sağlayıcı sitenin alt alan adları olarak yaratılabilen, bazıları ise kullanıcının kendi sunucusuna kurup çalıştırması gereken Blogger, Blogcu.com, WordPress, SpinMedia, joomla, Drupal gibi yazılımlardır.[3]\r\n\r\nPek çok blog, felsefe, din ve sanattan bilim, siyaset ve spora kadar belirli bir konular hakkında yorumlar sağlar. Diğerleri, daha kişisel çevrimiçi günlükler veya belirli bir kişi veya şirketin çevrimiçi marka reklamı işlevi görür. Tipik bir blog, metni, dijital görüntüleri ve diğer bloglara, web sayfalarına ve konusuyla ilgili diğer medyaya bağlantıları birleştirir. Bazıları kişisel (kişisel blog), haber (haber blogu), bilim (bilim blogu), sanat (sanat blogu), moda (moda blogu), felsefe (felsefe blogu), işletme (işletme blogu), fitness (fitness blogu), teknoloji (teknoloji blogu), kitap (kitap blogu), tasarım (tasarım blogu), yemek (yemek blogu), savaş (savaş blogu), teknoloji (teknoloji blogu), siyaset (siyasi blog), ekonomi (ekonomi blogu), hukuk (hukuk blogu), kurumsal (kurumsal blog), feminist (feminist blog), fotoğraflar (fotoblog), videolar (video blogları veya \"vlog'lar\"), müzik (MP3 blogu) ve ses (podcast'ler) konularına odaklansa da, çoğu blog esas olarak metinseldir.[4] Eğitimde, bloglar öğretim kaynakları olarak kullanılabilir; bunlara edublog'lar denir. Edebi blog'lar edebiyatla ilgili bloglardır. Mikroblog, çok kısa gönderiler içeren başka bir blog türüdür. 2022'ye ait bir tahmin, 1,9 milyardan fazla web sitesinden 600 milyondan fazla genel blog olduğunu öne sürdü. Blog oluşturanlara blogcu veya bloger denir. Bunlar çoğunlukla kamusal figür, internet ünlüsü ve diğer sosyal etki'si olan kişilerdir.\r\n\r\nİngilizcedeki \"web\" ve \"log\" kelimelerinin birleşmesinden oluşan weblog kavramının zamanla yaygınlaşmış adıdır.", Status = true }
+			);
+	}
+}
